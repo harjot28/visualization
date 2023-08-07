@@ -9,22 +9,20 @@ import pandas as pd  # pip install pandas openpyxl
 import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
 import sys
+import os
 if not sys.warnoptions:
     import warnings
     warnings.simplefilter("ignore")
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
-
-st.set_page_config(page_title="Parameter Summary", page_icon=":bar_chart:", layout="wide")
-
 # ---- READ EXCEL ----
 #@st.cache
-def get_data_from_excel():
-    df = pd.read_csv(r"C:\Users\ts-harjot.b.singh\Downloads\streamlit-sales-dashboard-main\streamlit-sales-dashboard-main\MO_Paramater_v1.csv")
-    return df
 
-df = get_data_from_excel()
+Input_path1 = os.path.join(os.getcwd())
+
+csv_name = '\\MO_Paramater_v1.csv'
+df = pd.read_csv(f"{Input_path1}{csv_name}")
 print(df)
 st.title(":bar_chart: NW MO & Parameter Summary")
 st.markdown("##")
