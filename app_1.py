@@ -19,10 +19,8 @@ if not sys.warnoptions:
 # ---- READ EXCEL ----
 #@st.cache
 
-Input_path1 = os.path.join(os.getcwd())
-print("dfdf",Input_path1)
-csv_name = '\\MO_Paramater_v1.csv'
-df = pd.read_csv(f"{Input_path1}{csv_name}")
+csv_name = '.\MO_Paramater_v1.csv'
+df = pd.read_csv(f"{csv_name}")
 
 st.title(":bar_chart: NW MO & Parameter Summary")
 st.markdown("##")
