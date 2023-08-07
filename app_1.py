@@ -4,12 +4,10 @@
 # @Project:  Sales Dashboard w/ Streamlit
 
 
-
 import pandas as pd  # pip install pandas openpyxl
 import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
 import sys
-import os
 if not sys.warnoptions:
     import warnings
     warnings.simplefilter("ignore")
@@ -19,8 +17,7 @@ if not sys.warnoptions:
 # ---- READ EXCEL ----
 #@st.cache
 
-csv_name = '.\MO_Paramater_v1.csv'
-df = pd.read_csv(f"{csv_name}")
+df = pd.read_csv("https://github.com/harjot28/visualization/blob/main/MO_Paramater_v1.csv")
 
 st.title(":bar_chart: NW MO & Parameter Summary")
 st.markdown("##")
