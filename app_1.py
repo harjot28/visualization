@@ -20,10 +20,10 @@ if not sys.warnoptions:
 #@st.cache
 
 Input_path1 = os.path.join(os.getcwd())
-
+print("dfdf",Input_path1)
 csv_name = '\\MO_Paramater_v1.csv'
 df = pd.read_csv(f"{Input_path1}{csv_name}")
-print(df)
+
 st.title(":bar_chart: NW MO & Parameter Summary")
 st.markdown("##")
 
