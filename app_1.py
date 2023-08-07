@@ -17,7 +17,7 @@ if not sys.warnoptions:
 # ---- READ EXCEL ----
 #@st.cache
 
-df = pd.read_csv("https://github.com/harjot28/visualization/blob/main/MO_Paramater_v1.csv")
+df = pd.read_csv(r"https://github.com/harjot28/visualization/blob/main/MO_Paramater_v1.csv")
 
 st.title(":bar_chart: NW MO & Parameter Summary")
 st.markdown("##")
