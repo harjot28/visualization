@@ -45,25 +45,3 @@ df_selection = df.query("MO == @mo | parameter == @parameterList")
 
 
 st.dataframe(df_selection)
-
-import plotly.express as px
-
-
-h = px.histogram(df_selection, x= "parameter", y="Value",
-             color='count', barmode='group',
-             histfunc='count',
-             height=400,text_auto=True)
-st.plotly_chart(h)
-
-
-
-c = px.bar(df_selection, x='parameter',
-             color='Value', barmode='group',
-             height=400,text_auto=True)
-
-st.plotly_chart(c)
-
-
-
-#st.bar_chart(df_selection, y = 'count', x='parameter')
-
