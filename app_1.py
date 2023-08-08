@@ -3,7 +3,7 @@
 # @YouTube:  https://youtube.com/c/CodingIsFun
 # @Project:  Sales Dashboard w/ Streamlit
 
-
+from pathlib import Path
 import pandas as pd  # pip install pandas openpyxl
 import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
@@ -16,8 +16,10 @@ if not sys.warnoptions:
 
 # ---- READ EXCEL ----
 #@st.cache
+path = Path("__file__").parent / "MO_Paramater_v1.csv"
+print("hshhshshs", path)
 
-df = pd.read_csv(r"https://github.com/harjot28/visualization/blob/main/MO_Paramater_v1.csv")
+df = pd.read_csv(path)
 
 st.title(":bar_chart: NW MO & Parameter Summary")
 st.markdown("##")
